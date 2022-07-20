@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         /* 폰트 */
         @font-face {font-family: 'SBAggroL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff'); font-weight: normal; font-style: normal;}
@@ -16,6 +17,9 @@
         a{text-decoration: none;}
 
         section{width: 70vw; margin: 0 auto;}
+
+        header{position: absolute;z-index: 10;}
+        header>hr{display: none;}
 
         /* 이벤트 배너 */
         #event{width: 100%; overflow: hidden; position: relative;}
@@ -68,7 +72,7 @@
         .scrollBar>div:nth-child(2){width: 100%; height: 8px; background-color: #FBDCE2; border-radius: 50px; position: absolute; top: 0; z-index: -2;}
         
         /* 검색버튼 */
-        #search{width: 80%; height: 3.5vw; padding: 0 3vw; margin: 30px auto; border-radius: 80px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); display: flex; justify-content: space-between;} /* 검색 박스 */
+        #search{width: 80%; height: 3.5vw; padding: 0 3vw; margin: 80px auto; border-radius: 80px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); display: flex; justify-content: space-between;} /* 검색 박스 */
         #search>input{border: unset; outline: unset; width: 95%; font-size: 18px;} /* 입력칸 */
         #search>button{background: none; border: unset;} /* 버튼스타일 */
         #search>button>img{width: 2vw;} /* 돋보기 */
@@ -76,18 +80,34 @@
         /* 미용, 관람예술, 참여예술 */
         .contentB{display: flex; justify-content: space-between; margin-bottom: 80px;}
         .contentB>a{width: 16vw;}
-        .contentB>a>div:nth-child(1){width: 16vw; height: 19.2vw; margin-bottom: 15px; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); position: relative; text-align: center;}
-        .contentB>a>div:nth-child(1)>img{width: 100%; height: 100%; border-radius: 20px; object-fit: cover;}
+        .contentB>a>div:nth-child(1){width: 16vw; height: 19.2vw; margin-bottom: 15px; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); position: relative; text-align: center;} /* 이미지 박스 */
+        .contentB>a>div:nth-child(1)>img{width: 100%; height: 100%; border-radius: 20px; object-fit: cover;} /* 이미지 */
         .contentB>a>p{width: 16vw; text-align: center;}
-        .contentB>a>p:nth-child(3){margin: 4px 0 7px; text-align: left; font-size: 18px; font-family: 'SBAggroM';}
-        .contentB>a>div:nth-child(4){width: 16vw; display: flex; align-items: center; justify-content: space-between;}
-        .contentB>a>div:nth-child(4)>p:nth-child(1){height: 10px; display: flex; align-items: center;}
-        .contentB>a>div:nth-child(4)>p:nth-child(1)>span{font-size: 13px;}
-        .contentB>a>div:nth-child(4)>p:nth-child(2){color: #f25774; font-size: 18px; font-family: 'SBAggroM';}
+        .contentB>a>p:nth-child(2){font-size: 14px;} /* 이미지 밑에 첫번째 글 */
+        .contentB>a>p:nth-child(3){margin: 4px 0 7px; text-align: center; font-size: 18px; font-family: 'SBAggroM';} /* 이미지 밑에 두번째 글 */
+        #beauty>.contentB>a>p:nth-child(3){text-align: left;} /* 미용 article에만 해당하는 이미지 밑에 두번째 글 */
+        .contentB>a>div:nth-child(4){width: 16vw; display: flex; align-items: center; justify-content: space-between;} /* 미용 article 별점, 가격 박스 */
+        .contentB>a>div:nth-child(4)>p:nth-child(1){height: 10px; display: flex; align-items: center;} /* 미용 article 별, 별점 박스 */
+        .contentB>a>div:nth-child(4)>p:nth-child(1)>span{font-size: 13px;} /* 별점수 */
+        .contentB>a>div:nth-child(4)>p:nth-child(2){color: #f25774; font-size: 18px; font-family: 'SBAggroM';} /* 가격 */
         
     </style>
 </head>
 <body>
+    <header>
+        <nav id="navi">
+            <div><a href="#" class="logo"><img src="img/logo.png" alt="logoImg" id="logoImg"></a></div>
+            <ul>
+                <li><a href="#" class="menu">소개</a></li>
+                <li><a href="#" class="menu">미용</a></li>
+                <li><a href="#" class="menu">예술</a></li>
+                <li><a href="#" class="menu">놀이</a></li>
+                <li><a href="#" class="menu">게시판</a></li>
+                <li><a href="#" class="menu" id="loginBtn"><button type="button" id="log">로그인</button></a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
     <!-- 이벤트 배너 -->
     <article id="event">
         <div>
@@ -277,7 +297,7 @@
                 <button><img src="img/icon 돋보기.png" alt="검색버튼"></button>
             </form>
         </article>
-        <article>
+        <article id="beauty">
             <div class="subject">
                 <p>미용</p>
                 <p><a href="">더보기 <img src="img/arrowLeftGray.png" alt="왼쪽화살표"></a></p>
@@ -293,9 +313,9 @@
                     <div>
                         <p>
                             <svg>
-                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7 M 8 5 C 8 4 10 4 10 5 C 10 7 11 8 13 8 C 15 8 14 10 13 10 C 12 10 11 14 13 15 C 13 16 12 17 11 16 C 10 14 8 14 7 16 C 6 17 4 16 5 15 C 6 13 6 11 4 10 C 2 9 3 8 4 8 C 6 8 8 7 8 5"></path>
+                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7"></path>
                             </svg>
-                            <span>123</span>
+                            <span>5.0</span>
                         </p>
                         <p>26,100</p>
                     </div>
@@ -310,9 +330,9 @@
                     <div>
                         <p>
                             <svg>
-                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7 M 8 5 C 8 4 10 4 10 5 C 10 7 11 8 13 8 C 15 8 14 10 13 10 C 12 10 11 14 13 15 C 13 16 12 17 11 16 C 10 14 8 14 7 16 C 6 17 4 16 5 15 C 6 13 6 11 4 10 C 2 9 3 8 4 8 C 6 8 8 7 8 5"></path>
+                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7"></path>
                             </svg>
-                            <span>123</span>
+                            <span>5.0</span>
                         </p>
                         <p>26,100</p>
                     </div>
@@ -327,9 +347,9 @@
                     <div>
                         <p>
                             <svg>
-                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7 M 8 5 C 8 4 10 4 10 5 C 10 7 11 8 13 8 C 15 8 14 10 13 10 C 12 10 11 14 13 15 C 13 16 12 17 11 16 C 10 14 8 14 7 16 C 6 17 4 16 5 15 C 6 13 6 11 4 10 C 2 9 3 8 4 8 C 6 8 8 7 8 5"></path>
+                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7"></path>
                             </svg>
-                            <span>123</span>
+                            <span>5.0</span>
                         </p>
                         <p>26,100</p>
                     </div>
@@ -344,9 +364,9 @@
                     <div>
                         <p>
                             <svg>
-                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7 M 8 5 C 8 4 10 4 10 5 C 10 7 11 8 13 8 C 15 8 14 10 13 10 C 12 10 11 14 13 15 C 13 16 12 17 11 16 C 10 14 8 14 7 16 C 6 17 4 16 5 15 C 6 13 6 11 4 10 C 2 9 3 8 4 8 C 6 8 8 7 8 5"></path>
+                                <path d="M 4.3 6.7 C 1.5 6.7 1.5 9.5 2.9 10.2 C 5 10.9 5 13 4.3 14.4 C 2.9 15.8 5 17.9 6.4 17.2 C 8.5 15.1 9.2 15.1 11.3 17.2 C 12.7 17.9 14.8 15.8 13.4 14.4 C 12.7 13 12.7 10.9 14.8 10.2 C 16.2 9.5 16.2 6.7 13.4 6.7 C 12.7 6.7 11.3 7.4 10.6 4.6 C 10.6 2.5 7.1 2.5 7.1 4.6 C 6.4 7.4 5 6.7 4.3 6.7"></path>
                             </svg>
-                            <span>123</span>
+                            <span>5.0</span>
                         </p>
                         <p>26,100</p>
                     </div>
@@ -355,7 +375,7 @@
         </article>
         <article>
             <div class="subject">
-                <p>미용</p>
+                <p>관람예술</p>
                 <p><a href="">더보기 <img src="img/arrowLeftGray.png" alt="왼쪽화살표"></a></p>
             </div>
             <div class="contentB">
@@ -363,29 +383,65 @@
                     <div>
                         <img src="img/뮤지컬 빨래.jpg" alt="화장품 사진">
                     </div>
-                    <p>anua</p>
-                    <p>아누아 자작나무 70 바르면 피부 넘나 좋아져 세럼 듬뿍 발라</p>
+                    <p>뮤지컬</p>
+                    <p>빨래</p>
                 </a>
                 <a href="">
                     <div>
-                        <img src="img/image 41.png" alt="화장품 사진">
+                        <img src="img/연극 행오버.jpg" alt="화장품 사진">
                     </div>
-                    <p>anua</p>
-                    <p>아누아 자작나무 70 바르면 피부 넘나 좋아져 세럼 듬뿍 발라</p>
+                    <p>연극</p>
+                    <p>행오버</p>
                 </a>
                 <a href="">
                     <div>
-                        <img src="img/image 42.png" alt="화장품 사진">
+                        <img src="img/뮤지컬 볼륨업.jpg" alt="화장품 사진">
                     </div>
-                    <p>anua</p>
-                    <p>아누아 자작나무 70 바르면 피부 넘나 좋아져 세럼 듬뿍 발라</p>
+                    <p>뮤지컬</p>
+                    <p>볼륨업</p>
                 </a>
                 <a href="">
                     <div>
-                        <img src="img/" alt="화장품 사진">
+                        <img src="img/연극 더클라운.jpg" alt="화장품 사진">
                     </div>
-                    <p>anua</p>
-                    <p>아누아 자작나무 70 바르면 피부 넘나 좋아져 세럼 듬뿍 발라</p>
+                    <p>연극</p>
+                    <p>더 클라운</p>
+                </a>
+            </div>
+        </article>
+        <article>
+            <div class="subject">
+                <p>참여예술</p>
+                <p><a href="">더보기 <img src="img/arrowLeftGray.png" alt="왼쪽화살표"></a></p>
+            </div>
+            <div class="contentB">
+                <a href="">
+                    <div>
+                        <img src="img/박람회 대한민국대표축제.jpg" alt="화장품 사진">
+                    </div>
+                    <p>22.07.15 - 22.08.15</p>
+                    <p>대한민국 대표 축제 박람회</p>
+                </a>
+                <a href="">
+                    <div>
+                        <img src="img/박람회 부산베이비&유아교육용품전.jfif" alt="화장품 사진">
+                    </div>
+                    <p>22.07.15 - 22.08.15</p>
+                    <p>부산 베이비&유아교육용품전</p>
+                </a>
+                <a href="">
+                    <div>
+                        <img src="img/박람회 SENDEX 재활&복지.jfif" alt="화장품 사진">
+                    </div>
+                    <p>22.07.15 - 22.08.15</p>
+                    <p>SENDEX 재활&복지</p>
+                </a>
+                <a href="">
+                    <div>
+                        <img src="img/박람회 부산펫쇼.jfif" alt="화장품 사진">
+                    </div>
+                    <p>22.07.15 - 22.08.15</p>
+                    <p>부산펫쇼</p>
                 </a>
             </div>
         </article>
