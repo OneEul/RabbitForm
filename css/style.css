@@ -5,7 +5,7 @@ header{max-width: 1920px;}
 @font-face {font-family: 'SBAggroM';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face {font-family: 'SBAggroB';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff'); font-weight: normal;font-style: normal;}
 /*logoImg*/
-#navi{margin: 0 auto; display: flex;width: 95vw; height:95px;justify-content: space-between;}
+#navi{margin: 0 auto; display: flex; width: 75vw; height:95px;justify-content: space-between;}
 #navi>div {width: 300px;display: flex;}
 .logo{display: flex; align-items: center;}
 #logoImg{width: 300px; height: 50px; display: flex; margin:0px;}
@@ -17,4 +17,4 @@ li{display: flex; align-items: center;}
 /*loginBtn*/
 #log{width: 100px; height:38px; padding-top: 5px; border: 1px solid #F25774; border-radius: 50px; background-color: #F25774;color:white;text-align: center;  align-items:center; font-size: 1.1rem;}
 #log:hover{color: #F25774;background-color: white; font-size: 1.1rem;}
-hr {border-color: #C7C7C7; border-top: 0px; margin: 0px;}
+header>hr {border-color: #C7C7C7; border-top: 0px; margin: 0px;}
