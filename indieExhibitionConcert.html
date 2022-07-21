@@ -12,7 +12,7 @@
         @font-face {font-family: 'SBAggroM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff'); font-weight: normal; font-style: normal;}
         @font-face {font-family: 'SBAggroB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff'); font-weight: normal; font-style: normal;}
 
-        *{padding: 0; margin: 0; color: #404040; font-family: 'SBAggroL';}
+        *{padding: 0; margin: 0; color: #404040; font-family: 'SBAggroL'; word-break: keep-all;}
 
         a{text-decoration: none;}
 
@@ -92,6 +92,10 @@
         #actMusicalContent>.contentB{margin-bottom: 40px;}
         #actMusicalContent>.contentB>a>p{text-align: center; font-size: 14px; font-family: 'SBAggroL';} /* 제목, 장소, 날짜 */
         #actMusicalContent>.contentB>a>p:nth-child(2){font-size: 18px; font-family: 'SBAggroM';} /* 제목 */
+
+        /* 등록 */
+        #register{height: 42px; line-height: 42px; vertical-align: middle; text-align: right;}
+        #register>a{padding: 9px 15px 7px; background-color: #f25774; border-radius: 10px; color: white; font-family: 'SBAggroM';}
 
         /* 검색버튼 */
         #search{width: 80%; height: 3.5vw; padding: 0 3vw; margin: 80px auto; border-radius: 80px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); display: flex; justify-content: space-between;} /* 검색 박스 */
@@ -358,6 +362,10 @@
                     <p>22.07.21 - 22.09.21</p>
                 </a>
             </div>
+        </article>
+        <!-- 등록버튼 -->
+        <article id="register">
+            <a href="">등록</a>
         </article>
         <!-- 검색칸 -->
         <article>

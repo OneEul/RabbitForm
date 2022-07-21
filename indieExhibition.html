@@ -12,7 +12,7 @@
         @font-face {font-family: 'SBAggroM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff'); font-weight: normal; font-style: normal;}
         @font-face {font-family: 'SBAggroB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff'); font-weight: normal; font-style: normal;}
 
-        *{padding: 0; margin: 0; color: #404040; font-family: 'SBAggroL';}
+        *{padding: 0; margin: 0; color: #404040; font-family: 'SBAggroL'; word-break: keep-all;}
 
         a{text-decoration: none;}
 
@@ -74,6 +74,7 @@
         
         /* 갤러리 컨텐츠 */
         .exhibitionContent>a{display: flex; align-items: center; margin-bottom: 4vw;}
+        .exhibitionContent>a:last-child{margin-bottom: 2vw;}
         .exhibitionContent>a>img{width: 35vw; height: 22vw; object-fit: cover;}
         .exhibitionContent>a>div{margin-left: 5vw;}
         .exhibitionContent>a>div>p:nth-child(1){margin: 1vw 0 0.7vw; font-size: 22px;}
@@ -81,6 +82,10 @@
         .exhibitionContent>a>div>hr{width: 37%; margin: 1vw 0 1.5vw; border-color: #404040; border-top: 0px;}
         .exhibitionContent>a>div>p:nth-child(4){width: 100%; margin-bottom: 4vw; font-size: 14px;}
         .exhibitionContent>a>div>p:nth-child(5){font-size: 18px;}
+
+        /* 등록 */
+        #register{height: 42px; line-height: 42px; vertical-align: middle; text-align: right;}
+        #register>a{padding: 9px 15px 7px; background-color: #f25774; border-radius: 10px; color: white; font-family: 'SBAggroM';}
 
         /* 검색버튼 */
         #search{width: 80%; height: 3.5vw; padding: 0 3vw; margin: 80px auto; border-radius: 80px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); display: flex; justify-content: space-between;} /* 검색 박스 */
@@ -252,6 +257,10 @@
                     <p>22.05.03 - 22.07.03</p>
                 </div>
             </a>
+        </article>
+        <!-- 등록버튼 -->
+        <article id="register">
+            <a href="">등록</a>
         </article>
         <!-- 검색칸 -->
         <article>
