@@ -1,0 +1,29 @@
+/*font*/
+@font-face {font-family: 'SBAggroL';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'SBAggroM';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'SBAggroB';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff'); font-weight: normal;font-style: normal;}
+
+*{padding: 0; margin: 0; color: #404040; font-family: 'SBAggroL'; word-break: keep-all;}
+
+a{text-decoration: none;}
+
+ul{list-style: none;}
+
+section{width: 70vw; margin: 0 auto;}
+
+/*logoImg*/
+#navi{margin: 0 auto; display: flex; width: 70vw; height:95px; justify-content: space-between;}
+#navi{display: flex;}
+.logo{display: flex; align-items: center;}
+#logoImg{width: 215px; display: flex; margin:0px; object-fit: cover;}
+
+/*menu*/
+#navi>ul{display: flex; align-items: center;}
+#navi li{margin-left: 2.4vw;} 
+.menu{padding:0 2px; text-decoration-line: none; color: #232323; text-align: center; align-items:center; font-size: 1.1rem; font-family: 'SBAggroM';}
+.menu:hover{color: #F25774;}
+
+/*loginBtn*/
+#loginBtn{padding: 0 1.5vw; height: 34px; padding-top: 3px; line-height: 36px; vertical-align: middle; border: 1px solid #F25774; border-radius: 50px; background-color: #F25774; color:white; text-align: center;  align-items:center; font-family: 'SBAggroL'; font-size: 1.1rem; display: inline-block;}
+#loginBtn:hover{color: #F25774; background-color: white; font-size: 1.1rem;}
+header>hr {border-color: #C7C7C7; border-top: 0px; margin: 0px;}

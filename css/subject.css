@@ -1,0 +1,7 @@
+/* 제목 + 더보기 */
+.subject{margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end;} /* #인기리뷰 + 더보기 박스 */
+.subject>p:nth-child(1){font-size: 27px; font-family: 'SBAggroM';} /* #인기 */
+.subject>p:nth-child(1)>span{color: #f25774; font-family: 'SBAggroM';} /* 리뷰 */
+.subject>p:nth-child(1)>img{margin-left: 10px; width: 25px;} /* 아래 화살표 이미지 */
+.subject>p:nth-child(2)>a{font-size: 17px; display: flex; align-items: center;} /* 더보기 */
+.subject>p:nth-child(2)>a>img{width: 8px; margin-left: 0.5vw;} /* > 이미지 */

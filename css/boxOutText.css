@@ -1,0 +1,12 @@
+/* 박스 밖에 텍스트 */
+.contentB{display: flex; justify-content: space-between; margin-bottom: 80px;}
+.contentB>a{width: 16vw;}
+.contentB>a>div:nth-child(1){width: 16vw; height: 19.2vw; margin-bottom: 15px; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); position: relative; text-align: center;} /* 이미지 박스 */
+.contentB>a>div:nth-child(1)>img{width: 100%; height: 100%; border-radius: 20px; object-fit: cover;} /* 이미지 */
+.contentB>a>p{width: 16vw; text-align: center;}
+.contentB>a>p:nth-child(2){font-size: 14px;} /* 이미지 밑에 첫번째 글 */
+.contentB>a>p:nth-child(3){margin: 4px 0 7px; text-align: center; font-size: 18px; font-family: 'SBAggroM';} /* 이미지 밑에 두번째 글 */
+.contentB>a>div:nth-child(4){width: 16vw; display: flex; align-items: center; justify-content: space-between;} /* 미용 article 별점, 가격 박스 */
+.contentB>a>div:nth-child(4)>p:nth-child(1){height: 10px; display: flex; align-items: center;} /* 미용 article 별, 별점 박스 */
+.contentB>a>div:nth-child(4)>p:nth-child(1)>span{font-size: 13px;} /* 별점수 */
+.contentB>a>div:nth-child(4)>p:nth-child(2){color: #f25774; font-size: 18px; font-family: 'SBAggroM';} /* 가격 */

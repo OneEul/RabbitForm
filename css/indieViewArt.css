@@ -1,0 +1,7 @@
+/* 인디갤러리 카테고리 */
+#indieExhibitionNav>div{font-family: 'SBAggroL'; font-size: 20px;}
+#indieExhibitionNav>.smallNavCheck{font-family: 'SBAggroM';}
+
+/* 등록 */
+#register{height: 42px; line-height: 42px; vertical-align: middle; text-align: right;}
+#register>a{padding: 9px 15px 7px; background-color: #f25774; border-radius: 10px; color: white; font-family: 'SBAggroM';}

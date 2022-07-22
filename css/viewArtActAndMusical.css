@@ -1,0 +1,6 @@
+/* 연극, 뮤지컬 컨텐츠 */
+#actMusicalContent>.subject>p:nth-child(1){font-size: 20px; font-family: 'SBAggroL';} /* 정렬 글자 */
+#actMusicalContent>.subject>p:nth-child(1)>img{margin-left: 10px; width: 20px;} /* 정렬 아래 화살표 이미지 */
+#actMusicalContent>.contentB{margin-bottom: 40px;}
+#actMusicalContent>.contentB>a>p{text-align: center; font-size: 14px; font-family: 'SBAggroL';} /* 제목, 장소, 날짜 */
+#actMusicalContent>.contentB>a>p:nth-child(2){font-size: 18px; font-family: 'SBAggroM';} /* 제목 */

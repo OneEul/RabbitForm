@@ -1,0 +1,21 @@
+/* 갤러리 상세 배너 */
+#exhibitionIMG>div:nth-child(1)>div{height: 47vw;}
+#exhibitionIMG>div:nth-child(1)>div>img{height: 43.85vw;}
+#exhibitionIMG>div:nth-child(3){height: 43.85vw;}
+.event>.eventButton>div{width: 70px;}
+.event>.eventButton>div>div{width: 100%; background-color: rgba(242, 87, 116, 0.2);}
+
+/* 갤러리 장소, 제목 */
+.galleryTitle{margin-top: 40px;}
+.galleryTitle>p{text-align: center;}
+.galleryTitle>p:nth-child(1){font-size: 30px;}
+.galleryTitle>p:nth-child(2){width: 70%; margin: 20px auto; font-family: 'SBAggroB'; font-size: 70px;}
+.galleryTitle>hr{width: 20%; margin: 0 auto;}
+
+/* 갤러리 날짜, 작가 */
+.galleryDatePlace{margin: 120px 0 80px;}
+.galleryDatePlace>p:nth-child(1){font-size: 23px; margin-bottom: 15px;}
+.galleryDatePlace>p:nth-child(2){width: 50%; font-size: 17px;}
+
+/* 갤러리 내용 */
+.galleryContent{margin-bottom: 80px; width: 50%; font-size: 15px;}

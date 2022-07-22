@@ -1,0 +1,26 @@
+/* 태그 */
+.tag{text-align: right; font-size: 14px; position: absolute; top: 5%; right: 5%;} /* 태그 */
+.tag>span{padding-left: 7px; color: #f25774;} /* 태그 글자 색 */
+
+/* 하트 도형, 별 도형 */
+svg{width: 20px; height: 20px;}
+path{fill: #f25774;}
+
+/* 검색버튼 */
+#search{width: 80%; height: 3.5vw; padding: 0 3vw; margin: 80px auto; border-radius: 80px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); display: flex; justify-content: space-between;} /* 검색 박스 */
+#search>input{border: unset; outline: unset; width: 95%; font-size: 18px;} /* 입력칸 */
+#search>button{background: none; border: unset;} /* 버튼스타일 */
+#search>button>img{width: 2vw;} /* 돋보기 */
+
+/* 수평 스크롤 바 */
+.scrollBar{margin: 20px 0; position: relative;}
+.scrollBar>div:nth-child(1){width: 30%; height: 8px; background-color: #f25774; border-radius: 50px;}
+.scrollBar>div:nth-child(2){width: 100%; height: 8px; background-color: #FBDCE2; border-radius: 50px; position: absolute; top: 0; z-index: -2;}
+
+/* 페이지넘버링 */
+#pageCount{display: flex; margin: 80px 0; justify-content: center;}
+#pageCount>div:nth-child(1)>a:nth-child(1), #pageCount>div:nth-child(3)>a:nth-last-child(1){color: #7e7e7e;}
+#pageCount>div:nth-child(3)>a:nth-child(1), #pageCount>div:nth-child(1)>a:nth-last-child(1){font-family: 'SBAggroM';}
+#pageClick{color: #f25774; font-family: 'SBAggroM';}
+#pageCount>p{margin: 0 3vw;}
+#pageCount>p>a{padding: 0 1vw;}

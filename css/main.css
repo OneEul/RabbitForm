@@ -1,0 +1,9 @@
+/* 메인페이지 header */
+header{position: absolute; left: 14.7%; z-index: 100;}
+header>hr{display: none;}
+
+/* 인기리뷰, 오늘의 인기글 */
+.popularReview{margin-top: 80px;}
+
+/* 미용 article에만 해당하는 이미지 밑에 두번째 글 */
+#beauty>.contentB>a>p:nth-child(3){text-align: left;}

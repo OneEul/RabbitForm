@@ -5,112 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* 폰트 */
-        @font-face {font-family: 'SBAggroL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff'); font-weight: normal; font-style: normal;}
-        @font-face {font-family: 'SBAggroM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff'); font-weight: normal; font-style: normal;}
-        @font-face {font-family: 'SBAggroB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff'); font-weight: normal; font-style: normal;}
-
-        *{padding: 0; margin: 0; color: #404040; font-family: 'SBAggroL'; word-break: keep-all;}
-
-        a{text-decoration: none;}
-
-        section{width: 70vw; margin: 0 auto;}
-
-        header>hr{display: none;}
-
-        /* 이벤트 배너 */
-        .event{width: 100%; overflow: hidden; position: relative;}
-        .event>div:nth-child(1){width: 500vw; display: flex;} /* 이벤트배너 사진+글자 박스 부모요소 */
-        .event>div:nth-child(1)>div{width: 100vw; height: 30vw; position: relative;} /* 이벤트배너 사진+글자 박스 */
-        .event>div:nth-child(1)>div>img{width: 100%; height: 100%; object-fit: cover;} /* 이벤트배너 사진 */
-        .event>div:nth-child(1)>div>div{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 0; left: 0; z-index: 3;} /* 이벤트배너 글자 박스 */
-        .event>div:nth-child(1)>div>div>p{color: white; text-align: center;} /* 이벤트배너 글자 색상 */
-        .event>div:nth-child(1)>div>div>p:nth-child(1){font-family: 'SBAggroB'; font-size: 30px;} /* 이벤트배너 첫번재 글자 */
-        .event>div:nth-child(1)>div>div>p:nth-child(2){margin: 10px 0; font-family: 'SBAggroM'; font-size: 20px;} /* 이벤트배너 두번째 글자 */
-        .event>div:nth-child(1)>div>div>p:nth-child(3){font-size: 14px;} /* 이벤트배너 세번째 글자 */
-        .event>div:nth-child(1)>div>a{width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 9;} /* 이벤트배너 a태그 */
-        .eventButton{width: 100%; display: flex; justify-content: center; position: absolute; bottom: 3%; z-index: 10;} /* 이벤트배너 버튼 부모요소 */
-        .eventButton>div{width: 150px; margin: 0 1vw; display: flex; flex-direction: column; align-items: center;} /* 이벤트배너 각 버튼 부모요소 */
-        .eventButton>div>p{color: rgba(255, 255, 255, 0.5); font-size: 14px;} /* 이벤트배너 각 버튼 글자 */
-        .eventButton>div>div{width: 100%; height: 8px; background-color: rgba(255, 255, 255, 0.5); border-radius: 30px;} /* 이벤트배너 각 버튼 도형 */
-        #eventButtonClick>p{color: #f25774;} /* 선택된 버튼 글자 */
-        #eventButtonClick>div{background-color: #f25774;} /* 선택된 버튼 도형 */
-        .event>div:nth-child(3){width: 100%; height: 30vw; background-color: rgba(0, 0, 0, 0.25); position: absolute; top: 0; left: 0;} /* 이벤트배너 투명검은박스 */
-
-        /* 연극, 뮤지컬 이벤트 배너 */
-        #actMusicalEvent>div:nth-child(1)>div{height: 40vw;}
-        #actMusicalEvent>div:nth-child(1)>div>div{width: 46%;}
-        #actMusicalEvent>div:nth-child(1)>div>div>p:nth-child(1){font-family: 'SBAggroL'; font-size: 30px;}
-        #actMusicalEvent>div:nth-child(1)>div>div>p:nth-child(2){font-family: 'SBAggroB'; font-size: 30px; margin-bottom: 6vw;}
-        #actMusicalEvent>div:nth-child(1)>div>div>p:nth-child(3){font-family: 'SBAggroL';}
-        #actMusicalEvent>div:nth-child(1)>div>div>p:nth-child(4){font-family: 'SBAggroM'; font-size: 18px;}
-        #actMusicalEvent>div:nth-child(3){height: 40vw;}
-
-        /* 관람예술 카테고리 */
-        .smallNav{display: flex; justify-content: space-evenly; margin-top: 40px;}
-        .smallNav>div{font-family: 'SBAggroM'; font-size: 24px;}
-        .smallNavCheck{color: #f25774; font-family: 'SBAggroB';} /* 선택된 카테고리 */
-        .smallNavCheck>hr{width: 80%; margin: 0 auto; border-color: #f25774;}
-
-        /* 지역선택 */
-        .areaChoice{margin: 40px 0 40px; display: flex; justify-content: center; align-items: center;}
-        .areaChoice>div:nth-child(1){margin-right: 22px; font-size: 15px;}
-        .areaChoice>div:nth-child(2){font-size: 27px; font-family: 'SBAggroM';}
-        .areaChoice>div:nth-child(2)>img{width: 20px;}
-
-        /* 제목 + 더보기 */
-        .subject{margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end;} /* #인기리뷰 + 더보기 박스 */
-        .subject>p:nth-child(1){font-size: 27px; font-family: 'SBAggroM';} /* #인기 */
-        .subject>p:nth-child(1)>span{color: #f25774; font-family: 'SBAggroM';} /* 리뷰 */
-        .subject>p:nth-child(1)>img{margin-left: 10px; width: 25px;} /* 아래화살표 이미지 */
-        .subject>p:nth-child(2)>a{font-size: 17px; display: flex; align-items: center;} /* 더보기 */
-        .subject>p:nth-child(2)>a>img{width: 8px; margin-left: 0.5vw;} /* > 이미지 */
-        
-        /* 기획전 컨텐츠 */
-        .exhibitionContent>a{display: flex; align-items: center; margin-bottom: 4vw;}
-        .exhibitionContent>a>img{width: 35vw; height: 22vw; object-fit: cover;}
-        .exhibitionContent>a>div{margin-left: 5vw;}
-        .exhibitionContent>a>div>p:nth-child(1){margin: 1vw 0 0.7vw; font-size: 22px;}
-        .exhibitionContent>a>div>p:nth-child(2){width: 100%; height: 100px; font-size: 40px; font-family: 'SBAggroB'; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
-        .exhibitionContent>a>div>hr{width: 37%; margin: 1vw 0 1.5vw; border-color: #404040; border-top: 0px;}
-        .exhibitionContent>a>div>p:nth-child(4){width: 100%; margin-bottom: 4vw; font-size: 14px;}
-        .exhibitionContent>a>div>p:nth-child(5){font-size: 18px;}
-
-        /* 검색버튼 */
-        #search{width: 80%; height: 3.5vw; padding: 0 3vw; margin: 80px auto; border-radius: 80px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); display: flex; justify-content: space-between;} /* 검색 박스 */
-        #search>input{border: unset; outline: unset; width: 95%; font-size: 18px;} /* 입력칸 */
-        #search>button{background: none; border: unset;} /* 버튼스타일 */
-        #search>button>img{width: 2vw;} /* 돋보기 */
-
-        /* 페이지넘버링 */
-        #pageCount{display: flex; margin: 80px 0; justify-content: center;}
-        #pageCount>div:nth-child(1)>a:nth-child(1), #pageCount>div:nth-child(3)>a:nth-last-child(1){color: #7e7e7e;}
-        #pageCount>div:nth-child(3)>a:nth-child(1), #pageCount>div:nth-child(1)>a:nth-last-child(1){font-family: 'SBAggroM';}
-        #pageClick{color: #f25774; font-family: 'SBAggroM';}
-        #pageCount>p{margin: 0 3vw;}
-        #pageCount>p>a{padding: 0 1vw;}
-
-    </style>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/eventBanner.css">
+    <link rel="stylesheet" href="css/SearchShapeTagPageNumberScrollBar.css">
+    <link rel="stylesheet" href="css/subject.css">
+    <link rel="stylesheet" href="css/viewArt.css">
+    <link rel="stylesheet" href="css/exhibition.css">
 </head>
 <body>
     <header>
         <nav id="navi">
-            <div><a href="#" class="logo"><img src="img/logo.png" alt="logoImg" id="logoImg"></a></div>
+            <a href="#" class="logo"><img src="img/logo.png" alt="logoImg" id="logoImg"></a>
             <ul>
                 <li><a href="#" class="menu">소개</a></li>
                 <li><a href="#" class="menu">미용</a></li>
-                <li><a href="#" class="menu">예술</a></li>
-                <li><a href="#" class="menu">놀이</a></li>
+                <li><a href="#" class="menu">관람예술</a></li>
+                <li><a href="#" class="menu">참여예술</a></li>
                 <li><a href="#" class="menu">게시판</a></li>
-                <li><a href="#" class="menu" id="loginBtn"><button type="button" id="log">로그인</button></a></li>
+                <li><a href="#" class="menu" id="loginBtn">로그인</a></li>
             </ul>
         </nav>
         <hr>
     </header>
     <!-- 이벤트 배너 -->
-    <article class="event" id="actMusicalEvent">
+    <article class="event" id="viewArtEvent">
         <div>
             <div>
                 <img src="img/수채화배.jpg">
