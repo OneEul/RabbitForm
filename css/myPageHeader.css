@@ -1,0 +1,14 @@
+.myPageHeader{margin: 50px 0;}
+.myPageHeader>div{display: flex; justify-content: space-between;} /* 프로필, 메뉴 부모 */
+.myPageHeader>div>div{display: flex; justify-content: space-between; align-items: center;} /* 프로필, 메뉴 */
+.myPageHeader>div>div:nth-child(1){padding: 10px; border: 1px solid #F25774; border-radius: 15px;} /* 프로필 */
+.myPageHeader>div>div:nth-child(1)>img{width: 79px; height: 79px; object-fit: cover; border-radius: 20px;} /* 프로필 사진 */
+.myPageHeader>div>div:nth-child(1)>p{margin: 0 10px; font-size: 25px; font-family: 'SBAggroB'; color: #F25774; word-wrap: break-word;} /* 닉네임 */
+.myPageHeader>div>div:nth-child(1)>div{width: 25px; height: 25px; background-color: #F25774; border-radius: 10px; align-self: flex-start; display: flex; align-items: center; justify-content: center;} /* 프로필설정 아이콘 박스 */
+.myPageHeader>div>div:nth-child(1)>div>img{width: 17px; height: 17px; object-fit: cover;} /* 프로필설정 아이콘 */
+
+.myPageHeader>div>div:nth-child(2)>div{margin-left: 2vw; font-family: 'SBAggroM'; font-size: 21px;} /* 마이페이지 메뉴 */
+#myPageCheck{color: #F25774;} /* 클릭된 곳 */
+#myPageCheck>hr{border-color: #F25774; border-top: 0;} /* 클릭된 곳 hr */
+
+.myPageHeader>hr{margin-top: 40px;} /* 프로필, 메뉴 밑에 hr */
