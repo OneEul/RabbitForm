@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/ViewArtActAndMusicalDetail.css">
+    <style>
+        section{width: 60vw;}
+        article{margin-top: 30px;}
+        .layout{margin:0; display: flex; justify-content:space-between; margin-bottom: 30px;}
+        .layout p{padding: 12px;}
+        .layout article:nth-of-type(1){width: 27.7vw; height: auto; display: flex; align-items: center;}
+        .layout article:nth-of-type(1)>img{width: 100%; height: 25.7vw; border-radius: 10px; box-shadow: #909090 1px 2px 4px;} /*img*/
+        .layout article:nth-of-type(2){margin-left: 50px; width: 27.5vw; height: auto;}
+        .layout article:nth-of-type(2)>p{font-size: 14pt;}
+        .layout article:nth-of-type(2)>p>a{font-size: 12pt;}
+        .layout article:nth-of-type(2) span{font-family: 'SBAggroM'; font-size: 18pt;}
+        .layout article:nth-of-type(2)>p:nth-of-type(2){font-size: 20pt; font-family: 'SBAggroM';}
+
+        .contentC>div>ul{display: flex; text-align: center;} 
+        .contentC>div>ul>li{padding: 8px 10px; width: 15vw; height: 22px; align-items: center; border: solid #F25774 1px; border-radius: 10px 10px 0px 0px;}
+        .contentC>div>ul>li a{font-size: 20px;}
+        .contentC>div>ul>li:nth-of-type(2){border-bottom: #fff solid 1px; z-index: 3; position: relative;} /*현재 페이지*/
+        .contentC>div>ul>li:nth-of-type(2) a{font-family: 'SBAggroM'; color: #F25774; position: relative;}
+        .contentC>div>ul>li:nth-of-type(2)>img[alt=icon_new]{width: 3.2vw; position: absolute;}
+
+        .contentMain img{width: 100%;}
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navi">
+            <a href="#" class="logo"><img src="img/logo.png" alt="logoImg" id="logoImg"></a>
+            <ul>
+                <li><a href="#" class="menu">소개</a></li>
+                <li><a href="#" class="menu">미용</a></li>
+                <li><a href="#" class="menu">관람예술</a></li>
+                <li><a href="#" class="menu">참여예술</a></li>
+                <li><a href="#" class="menu">게시판</a></li>
+                <li><a href="#" class="menu" id="loginBtn">로그인</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <section>
+        <div class="layout" id="ActMusicalLayout">
+            <article>
+                <img src="img/img01.png" alt="제품이미지">
+            </article>
+            <article>
+                <p>아나시스</p>
+                <p>아클레온 세보덤 솔루션 수분세럼 올인원 모공앰플 세럼 55g</p>
+                <hr>
+                <p>강기헌 강나리 김다흰 김대웅 서미정 이강우 한수림 강기헌 강나리 김다흰 김대웅 서미정 이강우 한수림 강기헌 강나리 김다흰 김대웅 서미정 이강우 한수림</p>
+                <p>22.05.03 - 22.07.03</p>
+            </article>
+        </div>
+        <hr>
+        <article class="ActMusicalLayout2">
+            <div>
+                <div>
+                    <p>등급</p>
+                    <p>8세 이상</p>
+                </div>
+                <div>
+                    <p>관람시간</p>
+                    <p>80분</p>
+                </div>
+                <div>
+                    <p>가격</p>
+                    <div>
+                        <p>R석 <span>40,000원</span></p>
+                        <p>S석 <span>30,000원</span></p>
+                        <p>A석 <span>10,000원</span></p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <p>쿠폰</p>
+                    <div>
+                        <p>신규회원</p>
+                        <p>20%</p>
+                        <img src="img/arrowBottomPink.png" alt="쿠폰저장버튼">
+                    </div>
+                    <div>
+                        <p>재관람</p>
+                        <p>20%</p>
+                        <img src="img/arrowBottomPink.png" alt="쿠폰저장버튼">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="calendar" id="ActMusicalCalendar">
+                    <span class="viewingDate">관람일</span>
+                    <div class="month-indicator">
+                        <div class="arrow">
+                            <
+                        </div>
+                        <time id="calenderTitle" datetime="2022-08"> 2022. 08 </time>
+                        <div class="arrow">
+                        >
+                        </div>
+                    <time datetime>
+                    </div>
+                    <div class="day-of-week">
+                        <div>일</div>
+                        <div>월</div>
+                        <div>화</div>
+                        <div>수</div>
+                        <div>목</div>
+                        <div>금</div>
+                        <div>토</div>
+                    </div>
+                    <div class="date-grid">
+                        <div class="calendar_table_row">
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time  datetime="2022-08-01">1</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-02">2</time>
+                            </button>
+                        </div>
+                        <div class="calendar_table_row">
+                            <button class="sunday">
+                                <time datetime="2022-08-03">3</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-04">4</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-05">5</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-06">6</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-07">7</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-08">8</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-09">9</time>
+                            </button>
+                        </div>
+                        <div class="calendar_table_row">
+                            <button class="sunday">
+                                <time  datetime="2022-08-10">10</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-11">11</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-12">12</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-13">13</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-14">14</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-15">15</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-16">16</time>
+                            </button>
+                        </div>
+                        <div class="calendar_table_row">
+                            <button class="sunday">
+                                <time  datetime="2022-08-17">17</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-18">18</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-19">19</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-20">20</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-21">21</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-22">22</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-23">23</time>
+                            </button>
+                        </div>
+                        <div class="calendar_table_row">
+                            <button class="sunday">
+                                <time  datetime="2022-08-24">24</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-25">25</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-26">26</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-27">27</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-28">28</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-29">29</time>
+                            </button>
+                            <button>
+                                <time datetime="2022-08-30">30</time>
+                            </button>
+                        </div>
+                        <div class="calendar_table_row">
+                            <button class="sunday">
+                                <time datetime="2022-08-31">31</time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                            <button>
+                                <time datetime=""></time>
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="table_row">
+                        <span class="viewingDate">회차</span>
+                    </div>
+                    <div class="table_row">
+                        <a href="#" class="times"><span>1회</span><span>00:00</span></a>
+                    </div>
+                    <div class="table_row" id="seat">
+                        <p id="seatCheck">
+                            <span class="ticket">R석</span>
+                            <span class="viewingDate">123</span>
+                        </p>
+                        <p>
+                            <span class="ticket">S석</span>
+                            <span class="viewingDate">123</span>
+                        </p>
+                        <p>
+                            <span class="ticket">A석</span>
+                            <span class="viewingDate">123</span>
+                        </p>
+                    </div>
+                    </div>
+                    <div class="table_row">
+                        <a href="#" class="booking">예매하기</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="contentC">
+            <div>
+                <ul>
+                    <li><a href="#">상품정보</a></li>
+                    <li><a href="#">상세리뷰</a><img src="img/new.png" alt="icon_new"></li>
+                    <li><a href="#">유의사항</a></li>
+                    <li><a href="#">Q&A</li>
+                </ul>
+            </div>
+        </article>
+        <article class="contentMain">
+            <img src="img/img03.jpg">
+        </article>
+    </section>
+</body>
+</html>

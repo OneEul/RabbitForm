@@ -1,0 +1,17 @@
+/* 달력 */
+.calendar {border: 1px solid #D1D1D1;  border-radius: 18px; width: 315px; margin-top: 20px;height:430px; border-radius: 20px;padding: 24px;}
+.viewingDate{margin: 5px 10px; font-family: 'SBAggroM';}
+.month-indicator  {display: flex; justify-content: center;margin: 20px 0;font-size: 15px;} 
+.arrow{margin: 0 30px; color: #adadad;  display: flex; text-align: center;}
+.day-of-week {display: flex; background-color: #eeeeee; border-radius: 10px; height: 30px;font-size: 15px; justify-content: space-around; text-align: center;}/*요일 글씨*/
+.day-of-week>div{display: flex;align-items: center; }/*요일 가운데정렬*/
+.calendar_table_row {display: flex;justify-content: space-around;  }/*날짜 가운데 정렬*/
+button {border:none;width: 30px; height: 30px; justify-content: center; margin: 1px; background-color: white; border-radius: 50px;}
+.sunday>time {color: #F25774; }
+.ticket{margin: 5px 10px;font-size: 15px;}
+.times{background-color: white; text-align: center; align-items: center; width: 99px; height: 38px; vertical-align: middle; border: 1px solid #F25774;font-size: 15px; border-radius: 10px; line-height: 38px; vertical-align: middle; display: inline-block;}
+.times>span{color: #F25774; height: 15px;}
+.times>span:nth-child(2){margin-left: 10px;}
+.table_row{margin: 20px 0;}
+.viewingDate{font-size: 15px;}
+.booking{color: white; background-color: #F25774; border: 1px solid #F25774;  display: inline-block; width: 315px; height: 38px; line-height: 38px;  vertical-align: middle; font-family: 'SBAggroM'; font-size: 22px; justify-content: center; text-align: center; padding: 5px 24px 0;  border-radius: 15px;}
