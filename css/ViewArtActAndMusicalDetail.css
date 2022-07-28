@@ -32,3 +32,4 @@ section>hr{border-color: #cfcfcf; border-top: 0;}
 #seat{display: flex;}
 #seat>p{margin-right: 15px;}
 #seatCheck>span{color: #F25774;}
+#dooking{height: 48px; line-height: 48px;}

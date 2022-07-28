@@ -1,0 +1,4 @@
+/* 수량 버튼 */
+.countButton>input[type=button]:nth-of-type(1){border-radius: 0.5vw 0px 0px 0.5vw; height: 1.7vw;} /* -버튼 */
+.countButton>input[type=button]:nth-of-type(2){border-radius: 0px 0.5vw 0.5vw 0vw; height: 1.7vw;} /* +버튼 */
+.countButton>a{border: solid #909090 1px; line-height: 1.7vw; vertical-align: middle; text-align: center; border-left:none; border-right:none; width: 2.7vw; font-size: 1vw;} /* 버튼 사이 숫자 */
