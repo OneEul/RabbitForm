@@ -13,7 +13,8 @@
         section>article:nth-child(1)>div>hr{border-color: #f25774; border-top: 0;}
 
         /* 결제페이지 레이아웃 */
-        article{margin-top: 40px;}
+        article:nth-child(2){margin-top: 30px;}
+        article{margin-top: 70px;}
         article>p{font-family: 'SBAggroM'; font-size: 20px; margin-bottom: 8px;}
         article>div{padding: 30px 0; border: 1px solid #c7c7c7; border-radius: 20px;}
         article>div>div{width: 93%; margin: 0 auto;}
@@ -45,14 +46,45 @@
         .address>div>div>div>div:nth-child(4)>div>input{margin-bottom: 17px;}
         .address>div>div>div>div:nth-child(4)>div>input:nth-child(2){width: 14.3vw; background-color: #f4a1b1;; border-color: #f4a1b1;}
         .address>div>div>div>div:nth-child(4)>div>input:nth-child(4){background-color: #f4a1b1;; border-color: #f4a1b1;;}
-        .address>div>div>div>div:nth-child(4)>div>input:nth-child(4), .address>div>div>div>div:nth-child(4)>div>input:nth-child(6){width: 32vw;}
+        .address>div>div>div>div:nth-child(4)>div>input:nth-child(4), .address>div>div>div>div:nth-child(4)>div>input:nth-child(6){width: 147%; max-width: 32vw;}
         .address>div>div>div>div:nth-child(4)>div>input:last-child{margin: 0;}
-        .address>div>div>div:nth-child(1)>input{width: 37.3vw; margin-bottom: 17px;}
+        .address>div>div>div:nth-child(1)>input{width: 137.7%; max-width: 41.8vw; margin-bottom: 17px;}
         .address>div>div>div:nth-child(1)>input:last-child{background-color: #f4a1b1; border-color: #f4a1b1;}
         .address>div>div>div:nth-child(2)>p{display: flex; align-items: center; font-size: 18px; margin-bottom: 7px;}
         .address>div>div>div:nth-child(2) input{width: 25px; height: 25px; margin-right: 8px; appearance: none; border: 1px solid #c7c7c7; border-radius: 4px;}
         .address>div>div>div:nth-child(2) input:checked{appearance: none; background-color: #f25774;}
         .address>div>div>div:nth-child(2)>hr{border-color: #c7c7c7; border-top: 0; margin: 10px 0;}
+        .address>div>div>div>input:last-child{margin-bottom: 0;}
+
+        /* 쿠폰 */
+        .couponBox>div>div:nth-child(1)>p>span{margin-left: 1vw; color: #F25774; font-family: 'SBAggroM';}
+        .couponBox>div hr{margin: 10px 0 30px; border-color: #c7c7c7; border-top: 0;}
+        .coupon{display: flex; justify-content: space-between;}
+        .couponBox .coupon>div{width: 16vw; height: 80px; margin-bottom: 0;}
+        #couponCheck{background-color: #F25774;}
+        #couponCheck>p{color: white;}
+
+        .coupon>p{margin-bottom: 20px;}
+        .coupon>div{width: 20vw; height: 60px; padding: 0 2vw; margin-bottom: 30px; border: #F25774 1px solid; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;}
+        .coupon>div>p{color: #F25774;}
+        .coupon>div>p:nth-child(1){font-size: 25px;}
+        .coupon>div>p:nth-child(2){font-family: 'SBAggroM'; font-size: 30px;}
+        .coupon>div>img{width: 3vw;}
+
+        /* 결제 */
+        .pay{margin-bottom: 80px; display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .pay>p{width: 100%;}
+        .pay>div:nth-child(2){width: 50%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .pay>div:nth-child(2)>div{width: 140px; height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        .pay img{width: 120px; height: 120px; object-fit: cover;}
+        #checkPay{background-color: #F25774; border-radius: 10px;}
+        #checkPay>p{color: white;}
+        .pay>div:nth-child(3){width: 40%; padding: 0; border: unset; display: flex; flex-direction: column; justify-content: center;}
+        .pay>div:nth-child(3)>p{width: 100%; margin: 5px 0; display: flex; justify-content: space-between; font-size: 18px;}
+        .pay>div:nth-child(3)>hr{width: 100%; margin-top: 7px; border-color: #c7c7c7; border-top: #c7c7c7;}
+        .pay>div:nth-child(3)>p:nth-last-child(2){margin: 14px 0; font-family: 'SBAggroM'; font-size: 25px;}
+        .pay>div:nth-child(3)>p:nth-last-child(2)>span{font-family: 'SBAggroM'; color: #F25774;}
+        .pay>div:nth-child(3)>div{width: 100%; height: 80px; margin: 0; background-color: #F25774; border-radius: 10px; font-family: 'SBAggroM'; font-size: 30px; color: white; text-align: center; line-height: 80px; vertical-align: middle;}
 
     </style>
 </head>
@@ -168,6 +200,58 @@
                         <p><input type="radio" name="" id="">친구</p>
                     </div>
                 </div>
+            </div>
+        </article>
+        <article class="couponBox">
+            <p>쿠폰</p>
+            <div>
+                <div>
+                    <p>적용 가능 쿠폰 <span>3개</span></p>
+                    <hr>
+                </div>
+                <div class="coupon">
+                    <div id="couponCheck">
+                        <p>신규회원</p>
+                        <p>20%</p>
+                    </div>
+                    <div>
+                        <p>재관람</p>
+                        <p>20%</p>
+                    </div>
+                    <div>
+                        <p>재관람</p>
+                        <p>20%</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="pay">
+            <p>결제</p>
+            <div>
+                <div id="checkPay">
+                    <img src="img/credit-card.png" alt="카드결제">
+                    <p>카드</p>
+                </div>
+                <div>
+                    <img src="img/coins.png" alt="무통장입금">
+                    <p>무통장입금</p>
+                </div>
+                <div>
+                    <img src="img/naverPay.png" alt="네이버페이">
+                    <p>네이버페이</p>
+                </div>
+                <div>
+                    <img src="img/kakaoPay.png" alt="카카오페이">
+                    <p>카카오페이</p>
+                </div>
+            </div>
+            <div>
+                <p>총 금액<span>200000원</span></p>
+                <p>배송비<span>9000원</span></p>
+                <p>쿠폰사용<span>-75000</span></p>
+                <hr>
+                <p>최종금액 <span>200000원</span></p>
+                <div>결제하기</div>
             </div>
         </article>
     </section>
