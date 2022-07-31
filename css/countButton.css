@@ -1,4 +1,6 @@
 /* 수량 버튼 */
-.countButton>input[type=button]:nth-of-type(1){border-radius: 0.5vw 0px 0px 0.5vw; height: 1.7vw;} /* -버튼 */
-.countButton>input[type=button]:nth-of-type(2){border-radius: 0px 0.5vw 0.5vw 0vw; height: 1.7vw;} /* +버튼 */
-.countButton>a{border: solid #909090 1px; line-height: 1.7vw; vertical-align: middle; text-align: center; border-left:none; border-right:none; width: 2.7vw; font-size: 1vw;} /* 버튼 사이 숫자 */
+.countButton{display: flex; justify-content: space-between; align-items: center;}
+.countButton>input[type=button]{font-size: 18px; width: 1.8vw; height: 30px; box-sizing: content-box; border: solid #909090 1px; background-color: #fff;} /* - + 버튼 공통 style*/
+.countButton>input[type=button]:nth-of-type(1){border-radius: 0.5vw 0px 0px 0.5vw;} /* -버튼 */
+.countButton>input[type=button]:nth-of-type(2){border-radius: 0px 0.5vw 0.5vw 0vw;} /* +버튼 */
+.countButton>span{border: solid #909090 1px; line-height: 30px; vertical-align: middle; text-align: center; border-left:none; border-right:none; width: 2.7vw; font-size: 0.9vw;} /* 갯수 */

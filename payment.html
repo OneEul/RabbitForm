@@ -6,87 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
-    <style>
-        
-        /* 주문 */
-        section>article:nth-child(1)>div{width: 55px; padding: 0; border: unset; margin-top: 80px; font-family: 'SBAggroM'; font-size: 25px; color: #f25774; text-align: center;}
-        section>article:nth-child(1)>div>hr{border-color: #f25774; border-top: 0;}
-
-        /* 결제페이지 레이아웃 */
-        article:nth-child(2){margin-top: 30px;}
-        article{margin-top: 70px;}
-        article>p{font-family: 'SBAggroM'; font-size: 20px; margin-bottom: 8px;}
-        article>div{padding: 30px 0; border: 1px solid #c7c7c7; border-radius: 20px;}
-        article>div>div{width: 93%; margin: 0 auto;}
-
-        /* 상품 */
-        .product>div>div{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
-        .product>div>div>div{height: 125px; display: flex;}
-        .product>div>div>div>img{width: 125px; height: 125px; margin-right: 1vw; object-fit: cover; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);}
-        .product>div>div>div>div{display: flex; flex-direction: column; justify-content: space-between;}
-        .product>div>div>div>div>div>p:nth-child(1){font-size: 14px;}
-        .product>div>div>div>div>div>p:nth-child(2){width: 31vw; height: auto; max-height: 60px; font-family: 'SBAggroM'; font-size: 18px;}
-        .product>div>div>div>div>p:nth-child(2){font-size: 14px;}
-        .product>div>div>div>div>p:nth-child(3){font-size: 12px;}
-        .product>div>div>div>div>p:nth-child(3)>span{margin-left: 0.4vw; color: #f25774;}
-        .product>div>div>p{font-size: 17px;}
-        .product>div>div>p:nth-child(3){font-family: 'SBAggroM'; color: #f25774;}
-        .product>div>div>hr{width: 100%; margin: 30px 0; border-color: #c7c7c7; border-top: 0;}
-        .product>div>div:last-child>hr{display: none;}
-
-        /* 배송지 */
-        .address>div>div{display: flex; justify-content: space-between;}
-        .address>div>div>div>div{display: flex; align-items: center; margin-bottom: 17px;}
-        .address>div>div>div>div>p{height: 46px; width: 100px; font-size: 18px; line-height: 46px; vertical-align: middle;}
-        .address>div>div>div:nth-child(1) input{width: 20vw; height: 30px; padding: 8px 12px; border: 1px solid #c7c7c7; border-radius: 5px; margin-right: 0.5vw; outline: none;}
-        .address>div>div>div>div:nth-child(3)>input:nth-child(2){width: 73px;}
-        .address>div>div>div>div:nth-child(3)>input:nth-child(3){width: 14.3vw;}
-        .address button{width: 100px; height: 46px; border: 1px solid #f25774; border-radius: 5px; margin-right: 0.3vw; background-color: unset; font-family: 'SBAggroM'; font-size: 18px; color: #f25774;}
-        .address>div>div>div>div:nth-child(4)>p{align-self: flex-start;}
-        .address>div>div>div>div:nth-child(4)>div>input{margin-bottom: 17px;}
-        .address>div>div>div>div:nth-child(4)>div>input:nth-child(2){width: 14.3vw; background-color: #f4a1b1;; border-color: #f4a1b1;}
-        .address>div>div>div>div:nth-child(4)>div>input:nth-child(4){background-color: #f4a1b1;; border-color: #f4a1b1;;}
-        .address>div>div>div>div:nth-child(4)>div>input:nth-child(4), .address>div>div>div>div:nth-child(4)>div>input:nth-child(6){width: 147%; max-width: 32vw;}
-        .address>div>div>div>div:nth-child(4)>div>input:last-child{margin: 0;}
-        .address>div>div>div:nth-child(1)>input{width: 137.7%; max-width: 41.8vw; margin-bottom: 17px;}
-        .address>div>div>div:nth-child(1)>input:last-child{background-color: #f4a1b1; border-color: #f4a1b1;}
-        .address>div>div>div:nth-child(2)>p{display: flex; align-items: center; font-size: 18px; margin-bottom: 7px;}
-        .address>div>div>div:nth-child(2) input{width: 25px; height: 25px; margin-right: 8px; appearance: none; border: 1px solid #c7c7c7; border-radius: 4px;}
-        .address>div>div>div:nth-child(2) input:checked{appearance: none; background-color: #f25774;}
-        .address>div>div>div:nth-child(2)>hr{border-color: #c7c7c7; border-top: 0; margin: 10px 0;}
-        .address>div>div>div>input:last-child{margin-bottom: 0;}
-
-        /* 쿠폰 */
-        .couponBox>div>div:nth-child(1)>p>span{margin-left: 1vw; color: #F25774; font-family: 'SBAggroM';}
-        .couponBox>div hr{margin: 10px 0 30px; border-color: #c7c7c7; border-top: 0;}
-        .coupon{display: flex; justify-content: space-between;}
-        .couponBox .coupon>div{width: 16vw; height: 80px; margin-bottom: 0;}
-        #couponCheck{background-color: #F25774;}
-        #couponCheck>p{color: white;}
-
-        .coupon>p{margin-bottom: 20px;}
-        .coupon>div{width: 20vw; height: 60px; padding: 0 2vw; margin-bottom: 30px; border: #F25774 1px solid; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;}
-        .coupon>div>p{color: #F25774;}
-        .coupon>div>p:nth-child(1){font-size: 25px;}
-        .coupon>div>p:nth-child(2){font-family: 'SBAggroM'; font-size: 30px;}
-        .coupon>div>img{width: 3vw;}
-
-        /* 결제 */
-        .pay{margin-bottom: 80px; display: flex; flex-wrap: wrap; justify-content: space-between;}
-        .pay>p{width: 100%;}
-        .pay>div:nth-child(2){width: 50%; display: flex; flex-wrap: wrap; justify-content: space-between;}
-        .pay>div:nth-child(2)>div{width: 140px; height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
-        .pay img{width: 120px; height: 120px; object-fit: cover;}
-        #checkPay{background-color: #F25774; border-radius: 10px;}
-        #checkPay>p{color: white;}
-        .pay>div:nth-child(3){width: 40%; padding: 0; border: unset; display: flex; flex-direction: column; justify-content: center;}
-        .pay>div:nth-child(3)>p{width: 100%; margin: 5px 0; display: flex; justify-content: space-between; font-size: 18px;}
-        .pay>div:nth-child(3)>hr{width: 100%; margin-top: 7px; border-color: #c7c7c7; border-top: #c7c7c7;}
-        .pay>div:nth-child(3)>p:nth-last-child(2){margin: 14px 0; font-family: 'SBAggroM'; font-size: 25px;}
-        .pay>div:nth-child(3)>p:nth-last-child(2)>span{font-family: 'SBAggroM'; color: #F25774;}
-        .pay>div:nth-child(3)>div{width: 100%; height: 80px; margin: 0; background-color: #F25774; border-radius: 10px; font-family: 'SBAggroM'; font-size: 30px; color: white; text-align: center; line-height: 80px; vertical-align: middle;}
-
-    </style>
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/radioStyle.css">
 </head>
 <body>
     <header>
@@ -189,7 +111,7 @@
                         <input><br>
                         <input>
                     </div>
-                    <div>
+                    <div class="radioStyle">
                         <p><input type="radio" name="" id="">기본 배송지</p>
                         <p><input type="radio" name="" id="">신규 배송지</p>
                         <hr>

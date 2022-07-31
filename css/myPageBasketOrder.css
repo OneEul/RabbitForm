@@ -1,0 +1,12 @@
+/* 장바구니, 주문조회 레이아웃 */
+.product{margin-top: 30px;}
+.product>p{margin-bottom: 14px; font-family: 'SBAggroM'; font-size: 20px; display: flex; align-items: center;}
+.product>div{padding: 30px 0; border: 1px solid #c7c7c7; border-radius: 20px;}
+.product>div>div{width: 93%; margin: 0 auto;}
+.product>p>input{margin: 0 1vw;}
+
+.product>div>div>div>div>p:nth-child(3){font-family: 'SBAggroM'; font-size: 14px;}
+.product>div>div>div>div>p:nth-child(3)>span{font-family: 'SBAggroM';}
+
+.product>div>div>div:nth-child(3){flex-direction: column; justify-content: space-between;}
+.product>div>div>div:nth-child(3)>p{width: 82px; height: 25px; border: 1px solid #404040; border-radius: 50px; font-size: 14px; text-align: center; line-height: 25px; vertical-align: middle;}

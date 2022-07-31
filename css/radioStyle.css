@@ -1,0 +1,2 @@
+.radioStyle input{width: 25px; height: 25px; margin-right: 8px; appearance: none; border: 1px solid #c7c7c7; border-radius: 4px;}
+.radioStyle input:checked{appearance: none; background-color: #f25774;}

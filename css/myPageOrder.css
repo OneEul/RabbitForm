@@ -1,0 +1,8 @@
+/* 기간 */
+.period{width: 800px; margin: 0 auto; display: flex; justify-content: center; align-items: center;}
+.period>p:nth-child(1){margin-right: 30px; font-size: 18px;}
+.period>p:nth-child(2){font-size: 27px;}
+.period>p:nth-child(2)>span{font-family: 'SBAggroM';}
+
+/* 검색 */
+#search{margin: 50px auto 50px;}
