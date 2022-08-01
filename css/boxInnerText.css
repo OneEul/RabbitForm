@@ -1,14 +1,15 @@
 /* 박스 안에 텍스트 */
-.contentA{display: flex; justify-content: space-between;} /* 컨텐츠 박스 부모 */
-.contentA>a{width: 14vw; height: auto; padding: 1vw 1vw 0; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); position: relative; text-align: center;} /* 컨텐츠 박스 */
-.contentA>a>img{width: 14vw; height: 12vw; margin-bottom: 2vw; object-fit: cover;} /* 컨텐츠 이미지 */
-.contentA>a>p{display: flex; align-items: center;} /* 글자 세로축 정렬 */
-.contentA>a>p:nth-last-child(3){font-size: 14px;} /* 좋아요 숫자 */
-.contentA>a>p:nth-last-child(2){margin: 0.3vw 0; text-align: left;} /* 리뷰 제목 부모 */
-.contentA>a>p:nth-last-child(2)>span{width: 100%; font-family: 'SBAggroM'; font-size: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} /* 리뷰 부모 */
-.contentA>a>p:nth-last-child(1){font-size: 12px; margin-bottom: 0.7vw; justify-content: space-between;} /* 제품명, 재구매 횟수 부모 */
-.contentA>a>p:nth-last-child(1)>span:nth-child(1){width: 47%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left;} /* 제품명 */
-.contentA>a>p:nth-last-child(1)>span:nth-child(2)>b{color: #f25774;} /* 재구매 횟수 */
+.contentA{display: flex; flex-wrap: wrap;}
+.contentA div{width: 16vw; margin: 0 0.74vw 80px; display: flex; justify-content: space-between;} /* 컨텐츠 박스 부모 */
+.contentA div>a{width: 14vw; height: auto; padding: 1vw 1vw 0; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); position: relative; text-align: center;} /* 컨텐츠 박스 */
+.contentA div>a>img{width: 14vw; height: 12vw; margin-bottom: 2vw; object-fit: cover;} /* 컨텐츠 이미지 */
+.contentA div>a>p{display: flex; align-items: center;} /* 글자 세로축 정렬 */
+.contentA div>a>p:nth-last-child(3){font-size: 14px;} /* 좋아요 숫자 */
+.contentA div>a>p:nth-last-child(2){margin: 0.3vw 0; text-align: left;} /* 리뷰 제목 부모 */
+.contentA div>a>p:nth-last-child(2)>span{width: 100%; font-family: 'SBAggroM'; font-size: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} /* 리뷰 부모 */
+.contentA div>a>p:nth-last-child(1){font-size: 12px; margin-bottom: 0.7vw; justify-content: space-between;} /* 제품명, 재구매 횟수 부모 */
+.contentA div>a>p:nth-last-child(1)>span:nth-child(1){width: 47%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left;} /* 제품명 */
+.contentA div>a>p:nth-last-child(1)>span:nth-child(2)>b{color: #f25774;} /* 재구매 횟수 */
 .scrollBar{margin: 20px 0; position: relative;}
 .scrollBar>div:nth-child(1){width: 30%; height: 8px; background-color: #f25774; border-radius: 50px;}
 .scrollBar>div:nth-child(2){width: 100%; height: 8px; background-color: #FBDCE2; border-radius: 50px; position: absolute; top: 0; z-index: -2;}

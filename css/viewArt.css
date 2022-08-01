@@ -18,3 +18,8 @@
 .areaChoice>div:nth-child(1){margin-right: 22px; font-size: 15px;}
 .areaChoice>div:nth-child(2){font-size: 27px; font-family: 'SBAggroM';}
 .areaChoice>div:nth-child(2)>img{width: 20px;}
+
+/* 컨텐트B 마진 */
+section>#actMusicalContent>.contentB>a{margin-bottom: 0;}
+section>#actMusicalContent>.contentB>a:nth-child(1),section>#actMusicalContent>.contentB>a:nth-child(2), section>#actMusicalContent>.contentB>a:nth-child(3), section>#actMusicalContent>.contentB>a:nth-child(4){margin-top: 0;}
+#actMusicalContent>.contentB>a:nth-child(4n+1),#actMusicalContent>.contentB>a:nth-child(4n+2), #actMusicalContent>.contentB>a:nth-child(4n+3), #actMusicalContent>.contentB>a:nth-child(4n+4){margin-top: 70px;}

@@ -1,3 +1,6 @@
 /* 리뷰모음 페이지 */
-.popularReview{margin: 80px 0;}
-.contentA{margin-bottom: 40px;}
+.popularReview{margin: 80px 0 0;}
+.contentA{margin-bottom: 10px;}
+
+/* 검색 리뷰 페이지 */
+section>#pageCount{margin-top: 0;}

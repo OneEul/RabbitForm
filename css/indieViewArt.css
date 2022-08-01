@@ -5,3 +5,6 @@
 /* 등록 */
 #register{height: 42px; line-height: 42px; vertical-align: middle; text-align: right;}
 #register>a{padding: 9px 15px 7px; background-color: #f25774; border-radius: 10px; color: white; font-family: 'SBAggroM';}
+
+/* 넘버링 등록 마진 */
+section>.contentB{margin-bottom: 10px;}

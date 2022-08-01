@@ -1,6 +1,7 @@
 /* 박스 밖에 텍스트 */
-.contentB{display: flex; justify-content: space-between; margin-bottom: 80px;}
-.contentB>a{width: 16vw;}
+.contentB{display: flex; margin-bottom: 80px; flex-wrap: wrap;}
+.contentB>a{width: 16vw; margin: 0 2vw 70px 0;}
+.contentB>a:nth-child(4n){margin: 0;}
 .contentB>a>div:nth-child(1){width: 16vw; height: 19.2vw; margin-bottom: 15px; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); position: relative; text-align: center;} /* 이미지 박스 */
 .contentB>a>div:nth-child(1)>img{width: 100%; height: 100%; border-radius: 20px; object-fit: cover;} /* 이미지 */
 .contentB>a>p{width: 16vw; text-align: center;}

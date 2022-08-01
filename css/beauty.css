@@ -17,3 +17,7 @@
 #beautyEvent>div:nth-child(1)>div>div>p:nth-child(1){font-family: 'SBAggroM'; font-size: 40px;} /* 이벤트배너 첫번재 글자 */
 #beautyEvent>div:nth-child(1)>div>div>p:nth-child(2){margin: 20px 0; font-family: 'SBAggroL'; font-size: 16px;} /* 이벤트배너 두번째 글자 */
 #beautyEvent>div:nth-child(1)>div>div>p:nth-child(3){font-family: 'SBAggroB'; font-size: 80px;} /* 이벤트배너 세번째 글자 */
+
+/* 미용페이지  넘버링*/
+section .contentB{margin-bottom: 10px;}
+section>#pageCount{margin-top: 0;}

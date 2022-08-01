@@ -2,8 +2,16 @@
 header{position: absolute; left: 14.7%; z-index: 100;}
 header>hr{display: none;}
 
+/* 메인이벤트 배너 */
+#mainBanner>div:nth-child(1){width: 500%; /* margin-left: -100%; */} /* 이벤트배너 사진+글자 박스 부모요소 */
+
 /* 인기리뷰, 오늘의 인기글 */
 .popularReview{margin-top: 80px;}
+.popularReview>.contentA{justify-content: space-between;}
+.popularReview>.contentA>div{margin: 0;}
+
+/* 컨텐트B */
+article>.contentB{margin-bottom: 0;}
 
 /* 미용 article에만 해당하는 이미지 밑에 두번째 글 */
 #beauty>.contentB>a>p:nth-child(3){text-align: left;}
