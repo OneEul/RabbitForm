@@ -53,9 +53,9 @@ function isFileImage(obj) {
 
     let node=parent_Obj.replaceChild(obj.cloneNode(true),obj);
 
-    document.getElementById("file").select();
+    document.getElementById("inputFile").select();
 
-    document.getElementById("file").value = "";
+    document.getElementById("inputFile").value = "";
 
     return false;
     }

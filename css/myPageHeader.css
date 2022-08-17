@@ -17,9 +17,10 @@
 #myProfileSet{position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; background-color: rgba(141, 141, 141, 0.363); display: flex; justify-content: center; align-items: center; display: none;}
 #myProfileSet>div{width: 50vw; height: 30vw; border: 1px solid #F25774; border-radius: 30px; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-around; position: relative;}
 #myProfileSet>div>img:nth-child(1){width: 20vw; height: 20vw; border-radius: 30px; object-fit: cover;}
+#myProfileSet>div>form:nth-child(2){display: flex; align-items: center;}
 #myProfileSet>div>form:nth-child(2)>label{padding: 10px 10px 7px; background-color: #F25774; border-radius: 10px; display: inline-block; cursor: pointer; color: white;}
 #inputFile{display: none;}
-#myProfileSet>div>form:nth-child(2)>button:nth-child(3){width: 50px; height: 41px; background-color: white; border: 1px solid #F25774; border-radius: 10px; margin-right: 5px; color: #F25774; cursor: pointer;}
+#myProfileSet>div>form:nth-child(2)>button:nth-child(3){width: 50px; height: 41px; background-color: white; border: 1px solid #F25774; border-radius: 10px; margin-left: 5px; color: #F25774; cursor: pointer;}
 #myProfileSet>div>form:nth-child(3){display: flex; align-items: center;}
 #myProfileSet>div>form:nth-child(3)>p{margin-right: 20px; font-size: 25px; font-family: 'SBAggroB'; color: #F25774;}
 #nickNameUpdate{width: 300px; padding: 3px 10px; border: 1px solid #a1a1a1; border-radius: 10px; margin-right: 10px; outline: unset; font-size: 25px; font-family: 'SBAggroB'; color: #F25774; text-align: center;}
